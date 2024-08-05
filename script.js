@@ -118,42 +118,124 @@
 // document.write("<br>");
 
 
-document.write('<tr><th></th>');
-for (let i = 1; i <= 8; i++) {
-    document.write('<tr>' + i + '<tr>')
-}
-document.write('</tr>');
+// document.write('<tr><th></th>');
+// for (let i = 1; i <= 8; i++) {
+//     document.write('<tr>' + i + '<tr>')
+// }
+// document.write('</tr>');
 
-document.write("<table>");
-for (let i = 1; i <= 8; i++) {
-    document.write("<tr>");
-    for (let j = 1; j <= 8; j++) {
-        if((i + j)% 2 ==0) {
-            document.write("<td class='bg-dark p-3'</td>");
-        } else {
-            document.write("<td class='bg-info p-3'</td>");
-        }
+// document.write("<table>");
+// for (let i = 1; i <= 8; i++) {
+//     document.write("<tr>");
+//     for (let j = 1; j <= 8; j++) {
+//         if((i + j)% 2 ==0) {
+//             document.write("<td class='bg-dark p-3'</td>");
+//         } else {
+//             document.write("<td class='bg-info p-3'</td>");
+//         }
+//     }
+//     document.write("</tr>");
+// }
+// document.write("</table>");
+
+// const jmena = ['Karel', 'Jakub', 'Jana', 'Marie', 'Tomáš'];
+// document.write(jmena[3]);
+
+// document.write("<br>");
+
+// for (let jmeno in jmena) {
+//     document.write(jmeno + ", " + "<br>");
+// }
+
+// for (let jmeno of jmena) {
+//     document.write(jmeno + ", " + "<br>");
+// }
+
+// jmena.shift();
+// jmena.pop();
+// jmena.splice(2, 0, 'Tomáš');
+// jmena.splice(1, 2);
+
+// jmena.forEach(j => document.write(j + ", ") + "<br>");
+
+// const uzivatel = {
+//     "jmeno" : "Karel",
+//     "vek" : 33,
+//     "pes" : alik
+// }
+
+// document.write(uzivatel.jmeno + " " + uzivatel.vek);
+
+// const alik = {
+//     "jmeno" : "Alik",
+//     "druh" : "pes", 
+//     "obojek" : true
+// }
+
+// document.write(uzivatel.pes.jmeno);
+
+// const studenti = [
+//     { "jmeno" : "Honza",
+//         "isic" : true
+//     },
+//     {
+//         "jmeno" : "Pepa",
+//         "isic" : false
+//     },
+//     {
+//         "jmeno" : "Marie",
+//         "isic" : true
+//     }
+// ]
+
+// document.write(studenti[1].isic);
+// document.write(studenti[2].jmeno);
+
+// studenti.forEach(s => document.write(s.jmeno));
+
+
+const tyden = ['Po', 'Út', 'St', 'Čt', 'Pá', 'So', 'Ne'];
+
+let vypis = prompt("Jaký den v týdnu chceš ? Zadej číslici: ");
+switch (vypis) {
+    case "1":
+        alert(tyden[0]);
+        break;
+    case "2":
+        alert(tyden[1]);
+        break;
+    case "3":
+        alert(tyden[2]);
+        break;
+    case "4":
+        alert(tyden[3]);
+        break;
+    case "5":
+        alert(tyden[4]);
+        break;
+    case "6":
+        alert(tyden[5]);
+        break;
+    case "7":
+        alert(tyden[6]);
+        break;
+    default:
+        alert("Tolik dní v týdnu není");
+        break;
+}
+
+let osoba = "Karel";
+for (let i = osoba.length - 1; i >=0; i--) {
+    document.write(osoba[i]);
+}
+
+let text = "30. narozeniny slavím 1.1.2020";
+
+let soucet = 0;
+for (let i = 0; i < text.length; i++) {
+    if ((text.charCodeAt(i) >= 48) && (text.charCodeAt(i) <= 57)) {
+        soucet += Number(text[i]);
     }
-    document.write("</tr>");
-}
-document.write("</table>");
-
-const jmena = ['Karel', 'Jakub', 'Jana', 'Marie', 'Tomáš'];
-document.write(jmena[3]);
-
-document.write("<br>");
-
-for (let jmeno in jmena) {
-    document.write(jmeno + ", " + "<br>");
 }
 
-for (let jmeno of jmena) {
-    document.write(jmeno + ", " + "<br>");
-}
-
-jmena.shift();
-jmena.pop();
-jmena.splice(2, 0, 'Tomáš');
-jmena.splice(1, 2);
-
-jmena.forEach(j => document.write(j + ", ") + "<br>");
+document.write(soucet);
